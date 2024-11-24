@@ -50,11 +50,10 @@ jobs:
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: Build and push Docker image
-      uses: docker/build-push-action@v5
-      with:
-        context: .
-        push: true
-        tags: |
-          ghcr.io/${{ github.repository_owner }}/${{ github.event.repository.name }}:latest
-          ghcr.io/${{ github.repository_owner }}/${{ github.event.repository.name }}:${{ github.run_number }}
+    - name: Build Docker image
+      run: |
+        docker buildx build --iidfile /home/runner/work/_temp/docker-actions-toolkit-qE7Ud9/build-iidfile-108f6079cd.txt \
+          --tag ghcr.io/yamkin697/python1:latest \
+          --tag ghcr.io/yamkin697/python1:6 \
+          --metadata-file /home/runner/work/_temp/docker-actions-toolkit-qE7Ud9/build-metadata-64cd4d4174.json \
+          --push .
