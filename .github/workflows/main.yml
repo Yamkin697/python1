@@ -43,9 +43,6 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
-    - name: Build application
-      run: python setup.py build  # Замените на вашу команду сборки, если есть
-
     - name: Log in to GitHub Container Registry
       uses: docker/login-action@v2
       with:
