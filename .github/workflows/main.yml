@@ -59,4 +59,4 @@ jobs:
         docker buildx build -f ./Dockerfile \ 
           --tag ghcr.io/yamkin697/python1:latest \
           --tag ghcr.io/yamkin697/python1:6 \
-          --push ..
+          --push.
