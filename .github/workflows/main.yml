@@ -56,7 +56,7 @@ jobs:
 
     - name: Build Docker image
       run: |
-        docker buildx build -f ./Dockerfile \ 
+        docker buildx build -f yamkin697/python1/Dockerfile \
           --tag ghcr.io/yamkin697/python1:latest \
           --tag ghcr.io/yamkin697/python1:6 \
-          --push.
+          --push yamkin697/python1/Dockerfile
