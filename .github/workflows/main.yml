@@ -28,6 +28,10 @@ jobs:
   build-and-publish:
     needs: test  # Эта задача запускается только после завершения тестирования
     runs-on: ubuntu-latest
+    
+    permissions:
+      contents: read
+      packages: write
 
     steps:
     - name: Checkout code
