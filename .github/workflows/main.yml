@@ -60,7 +60,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: .
-          file: yamkin697/python1/Dockerfile
+          file: Dockerfile
           push: true
           tags: |
             ghcr.io/yamkin697/python1:latest
