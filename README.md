@@ -1,1 +1,13 @@
-Project for test GitHuub Action
+Project for test GitHub Action 
+Задача:
+Создать репозиторий в GitHub с настроенными workflow (GitHub Actions) для кодовой базы на Python.
+・Код на Python обязательно должен использовать сторонние зависимости (любые библиотеки).
+・На каждый git push должен запускаться pipeline, состоящий из нескольких шагов:
+1. Checkout
+2. Установка Python
+3. Установка зависимостей
+4. Сборка приложения
+5. Запаковка собранного приложения в Docker Image
+6. Публикация Docker Image в GitHub Container Registry
+・Обязательно должны использоваться 3rd party Actions (Checkout, Docker, ...)
+・Параллельно сборке приложения должна выполняться проверка форматирования кодовой базы  
